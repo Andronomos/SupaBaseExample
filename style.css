@@ -26,6 +26,48 @@ main {
 }
 
 #output {
-    color:#fff;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.task-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px; /* Smooth rounded corners */
+    padding: 16px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    margin: 0 0 6px 0;
+    color: #1e293b;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: #64748b;
+    display: inline-block;
+}
+
+.loading, .empty-state {
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+}
+
+.error {
+    color: #dc2626;
+    font-weight: 500;
 }
