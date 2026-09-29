@@ -17,3 +17,9 @@ button {
         background-color: #4C58FF;
     }
 }
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

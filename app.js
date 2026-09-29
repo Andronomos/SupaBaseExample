@@ -8,7 +8,7 @@ const outputDiv = document.getElementById('output');
 fetchBtn.addEventListener('click', async () => {
     outputDiv.innerText = "Loading data...";
     
-    let { data: tasks, error } = await supabase
+    let { data: tasks, error } = await supabaseClient
         .from('tasks')
         .select('*');
 
