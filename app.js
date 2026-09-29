@@ -1,4 +1,4 @@
-import { createClient } from 'https://jsdelivr.net';
+// import { createClient } from 'https://jsdelivr.net';
 
 const SUPABASE_URL = 'https://mfevyxlyjzjlrowbjwtv.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_v25Fwjw-Z9DIgQyxkwZHBA_i7IBdj6n';
