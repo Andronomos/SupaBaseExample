@@ -1,5 +1,10 @@
+:root {
+    --primary: #1E7CFF;
+    --danger: #dc2626;
+}
+
 body {
-    background: #666;
+    background: #121212;
 }
 
 button {
@@ -10,7 +15,7 @@ button {
     border-radius: 0.35rem;
     
     &:hover {
-        background-color: #1E7CFF;
+        background-color: var(--primary);
     }
 
     &:pressed {
@@ -35,8 +40,8 @@ main {
 }
 
 .task-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: #1E1E1E;
+    border: none;
     border-radius: 12px; /* Smooth rounded corners */
     padding: 16px 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
@@ -50,25 +55,25 @@ main {
 
 .card-title {
     margin: 0 0 6px 0;
-    color: #1e293b;
+    color: #FFF;
     font-size: 1.15rem;
     font-weight: 600;
 }
 
 .card-date {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #BABABA;
     display: inline-block;
 }
 
 .loading, .empty-state {
     text-align: center;
-    color: #64748b;
+    color: var(--primary);
     font-style: italic;
 }
 
 .error {
-    color: #dc2626;
+    color: var(--danger);
     font-weight: 500;
 }
 
@@ -91,11 +96,11 @@ main {
 }
 
 #task-input:focus {
-    border-color: #3b82f6;
+    border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-#submit-btn, #fetch-btn {
+#submit-btn {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
@@ -103,29 +108,15 @@ main {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s ease;
-}
-
-#submit-btn {
-    background-color: #2563eb;
+    background-color: var(--primary);
     color: #ffffff;
-}
 
-#submit-btn:hover {
-    background-color: #1d4ed8;
-}
+    &:hover {
+        background-color: #1d4ed8;
+    }
 
-#submit-btn:disabled {
-    background-color: #93c5fd;
-    cursor: not-allowed;
-}
-
-#fetch-btn {
-    display: block;
-    margin: 0 auto 20px auto;
-    background-color: #475569;
-    color: #ffffff;
-}
-
-#fetch-btn:hover {
-    background-color: #334155;
+    &:disabled {
+        background-color: #93c5fd;
+        cursor: not-allowed;
+    }
 }
