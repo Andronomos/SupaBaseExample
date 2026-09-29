@@ -1,10 +1,7 @@
 const SUPABASE_URL = 'https://mfevyxlyjzjlrowbjwtv.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_v25Fwjw-Z9DIgQyxkwZHBA_i7IBdj6n';
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-const fetchBtn = document.getElementById('fetch-btn');
 const outputDiv = document.getElementById('output');
-
 const taskForm = document.getElementById('task-form');
 const taskInput = document.getElementById('task-input');
 
@@ -50,6 +47,8 @@ async function loadTasks() {
 
     document.addEventListener('DOMContentLoaded', loadTasks);
 }
+
+document.addEventListener('DOMContentLoaded', loadTasks);
 
 taskForm.addEventListener('submit', async (event) => {
     event.preventDefault();
