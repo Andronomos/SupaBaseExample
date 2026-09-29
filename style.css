@@ -47,10 +47,18 @@ main {
     padding: 16px 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+
+        .card-actions {
+            opacity: 1;
+        }
     }
     
     .card-title {
@@ -65,6 +73,36 @@ main {
         color: #BABABA;
         display: inline-block;
     }
+
+    .card-actions {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+}
+
+.edit-btn, .delete-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 6px !important;
+    margin: 0 !important;
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    transform: scale(1.2);
+}
+
+.delete-btn {
+    filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.3));
 }
 
 .loading, .empty-state {
