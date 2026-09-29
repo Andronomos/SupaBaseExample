@@ -4,6 +4,9 @@ body {
 
 button {
     background-color: #4F7BFF;
+    border: none;
+    color: #FFF;
+    padding: 3rem 2rem;
     
     &:hover {
         background-color: #1E7CFF;
