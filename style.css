@@ -71,3 +71,61 @@ main {
     color: #dc2626;
     font-weight: 500;
 }
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    margin: 30px auto 15px auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+#task-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#task-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+#submit-btn, #fetch-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#submit-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+#submit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+#submit-btn:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+}
+
+#fetch-btn {
+    display: block;
+    margin: 0 auto 20px auto;
+    background-color: #475569;
+    color: #ffffff;
+}
+
+#fetch-btn:hover {
+    background-color: #334155;
+}
